@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-13T15:07:17 IST" name="MySuite" finished-at="2023-08-13T15:07:18 IST" duration-ms="54">
+    <groups>
+    </groups>
+    <test started-at="2023-08-13T15:07:17 IST" name="Regression" finished-at="2023-08-13T15:07:18 IST" duration-ms="54">
+      <class name="testNGPractice.Class1">
+        <test-method signature="samp1()[pri:0, instance:testNGPractice.Class1@4135c3b]" started-at="2023-08-13T15:07:17 IST" name="samp1" finished-at="2023-08-13T15:07:17 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- samp1 -->
+        <test-method signature="smap()[pri:0, instance:testNGPractice.Class1@4135c3b]" started-at="2023-08-13T15:07:17 IST" name="smap" finished-at="2023-08-13T15:07:17 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smap -->
+      </class> <!-- testNGPractice.Class1 -->
+      <class name="testNGPractice.Class3">
+        <test-method signature="samp3()[pri:0, instance:testNGPractice.Class3@368f2016]" started-at="2023-08-13T15:07:18 IST" name="samp3" finished-at="2023-08-13T15:07:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- samp3 -->
+        <test-method signature="samp31()[pri:0, instance:testNGPractice.Class3@368f2016]" started-at="2023-08-13T15:07:18 IST" name="samp31" finished-at="2023-08-13T15:07:18 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- samp31 -->
+      </class> <!-- testNGPractice.Class3 -->
+      <class name="testNGPractice.Class2">
+        <test-method signature="samp2()[pri:0, instance:testNGPractice.Class2@4d5d943d]" started-at="2023-08-13T15:07:17 IST" name="samp2" finished-at="2023-08-13T15:07:18 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- samp2 -->
+      </class> <!-- testNGPractice.Class2 -->
+    </test> <!-- Regression -->
+  </suite> <!-- MySuite -->
+</testng-results>
