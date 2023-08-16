@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import RSA.pageObjects.LoginPage;
+
 public class Standalone {
 	
 	public static void main(String[] args)
@@ -21,6 +23,7 @@ public class Standalone {
 		driver.get("https://rahulshettyacademy.com/client/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		//Login
+		LoginPage loginpage= new LoginPage(driver);
 		driver.findElement(By.id("userEmail")).sendKeys("ram@yopmail.com");
 		driver.findElement(By.id("userPassword")).sendKeys("Asdfg1@34");
 		driver.findElement(By.name("login")).click();
