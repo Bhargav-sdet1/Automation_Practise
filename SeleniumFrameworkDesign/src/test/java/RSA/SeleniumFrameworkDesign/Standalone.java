@@ -51,7 +51,7 @@ public class Standalone {
 		
 		driver.findElement(By.xpath("//button[@routerlink='/dashboard/cart']")).click();
 		
-		List<WebElement> cartItems=driver.findElements(By.cssSelector(".infoWrap"));
+		List<WebElement> cartItems=driver.findElements(By.cssSelector("li .infoWrap"));
 		Boolean bool=cartItems.stream().anyMatch(pro->pro.findElement(By.cssSelector("h3")).getText().equals(addedProduct));
 		Assert.assertTrue(bool);
 		driver.findElement(By.cssSelector(".totalRow .btn-primary")).click();

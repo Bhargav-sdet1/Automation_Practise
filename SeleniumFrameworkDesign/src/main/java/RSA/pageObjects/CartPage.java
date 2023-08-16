@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+
 
 import RSA.AbstractComponents.AbstractComponents;
 
@@ -20,21 +20,21 @@ public class CartPage extends AbstractComponents{
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(css=".infoWrap") List<WebElement> cartProducts;
+	@FindBy(css="li .infoWrap") List<WebElement> cartProducts;
 	@FindBy(css=".totalRow .btn-primary") WebElement checkoutele;
+	By productTxt = By.cssSelector("li .infoWrap h3");
 	
-	public boolean VerifyProductDisplay(String ProductName)
+	public Boolean VerifyProductDisplay(String ProductName)
 	{
-		Boolean match = cartProducts.stream().anyMatch(product->product.getText()
-				.equalsIgnoreCase(ProductName));
+		Boolean match=cartProducts.stream().anyMatch(pro->pro.findElement(productTxt)
+				.getText().equals(ProductName));
 		return match;
 	}
 	
 	public CheckoutPage CheckoutButton()
 	{
 		checkoutele.click();
-		CheckoutPage checkoutPage = new CheckoutPage(driver);
-		return checkoutPage;
+		return new CheckoutPage(driver);
 	}
 	
 }
