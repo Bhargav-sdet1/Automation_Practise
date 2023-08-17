@@ -1,5 +1,6 @@
 package RSA.SeleniumFrameworkDesign;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
@@ -7,25 +8,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import RSA.TestComponents.BaseTest;
 import RSA.pageObjects.CartPage;
 import RSA.pageObjects.CheckoutPage;
 import RSA.pageObjects.ConfirmationPage;
 import RSA.pageObjects.LoginPage;
 import RSA.pageObjects.ProductCatalog;
 
-public class SubmitOrderTest {
+public class SubmitOrderTest extends BaseTest{
 	
-	public static void main(String[] args) throws InterruptedException
+	@Test
+	public void SubmitOrder() throws InterruptedException, IOException
 	{
 		String ProductName="ADIDAS ORIGINAL";
 		String Country="India";
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		//Login
-		LoginPage loginpage= new LoginPage(driver);
-		loginpage.goTo();
+		LoginPage loginpage=LauchApplication();
 		ProductCatalog productCatalog=loginpage.loginMeth("ram@yopmail.com", "Asdfg1@34");
 		
 		List<WebElement> Products=productCatalog.getProductList();
