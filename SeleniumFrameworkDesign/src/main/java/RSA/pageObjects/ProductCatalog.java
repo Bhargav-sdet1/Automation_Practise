@@ -48,9 +48,7 @@ public class ProductCatalog extends AbstractComponents{
 		prod.findElement(addToCart).click();
 		
 		waitForElementToAppear(toastMsg);
-		//waitForElementToDisappear(spinner);
-		
-		
+		//waitForElementToDisappear(spinner);	
 	}
 	
 
