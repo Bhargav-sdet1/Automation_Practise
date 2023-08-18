@@ -24,7 +24,6 @@ public class SubmitOrderTest extends BaseTest{
 	{
 		String ProductName="ADIDAS ORIGINAL";
 		String Country="India";
-		LoginPage loginpage=LauchApplication();
 		ProductCatalog productCatalog=loginpage.loginMeth("ram@yopmail.com", "Asdfg1@34");
 		
 		List<WebElement> Products=productCatalog.getProductList();
@@ -39,7 +38,7 @@ public class SubmitOrderTest extends BaseTest{
 		ConfirmationPage confirmationpage=checkoutPage.PlaceOrderButton();
 		String ConfirmMsg=confirmationpage.GetConfirmMsg();
 		Assert.assertTrue(ConfirmMsg.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
-		driver.close();	
+
 		
 	}
 

@@ -7,12 +7,15 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import RSA.pageObjects.LoginPage;
 
 public class BaseTest {
 
 	public WebDriver driver;
+	public LoginPage loginpage;
 
 	public WebDriver InitializeDriver() throws IOException
 	{
@@ -32,13 +35,20 @@ public class BaseTest {
 		return driver;
 	}
 	
+	@BeforeMethod
 	public LoginPage LauchApplication() throws IOException
 	{
 
 		driver=InitializeDriver();
-		LoginPage loginpage= new LoginPage(driver);
+		loginpage= new LoginPage(driver);
 		loginpage.goTo();
 		return loginpage;
+	}
+	
+	@AfterMethod
+	public void tearDown()
+	{
+		driver.close();
 	}
 
 }

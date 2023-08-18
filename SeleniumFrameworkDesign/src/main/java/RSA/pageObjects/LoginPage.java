@@ -21,6 +21,7 @@ public class LoginPage extends AbstractComponents{
 	@FindBy(id="userEmail") WebElement Uname;
 	@FindBy(id="userPassword") WebElement Upassword;
 	@FindBy(id="login") WebElement LoginButton;
+	@FindBy(css="[class*='flyInOut']") WebElement ErrorLogin;
 
 	
 	public ProductCatalog loginMeth(String UserEmail, String UserPassword)
@@ -35,6 +36,12 @@ public class LoginPage extends AbstractComponents{
 	{
 		driver.get("https://rahulshettyacademy.com/client/");
 
+	}
+	
+	public String getErrorMsg()
+	{
+		waitForElementToAppear(ErrorLogin);
+		return ErrorLogin.getText();
 	}
 	
 

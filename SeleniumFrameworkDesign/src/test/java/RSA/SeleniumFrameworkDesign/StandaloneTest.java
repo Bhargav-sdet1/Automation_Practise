@@ -14,7 +14,7 @@ import org.testng.Assert;
 
 import RSA.pageObjects.LoginPage;
 
-public class Standalone {
+public class StandaloneTest {
 	
 	public static void main(String[] args)
 	{
