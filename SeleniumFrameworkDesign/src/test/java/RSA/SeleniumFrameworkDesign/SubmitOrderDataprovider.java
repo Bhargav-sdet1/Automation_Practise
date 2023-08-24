@@ -45,17 +45,17 @@ public class SubmitOrderDataprovider extends BaseTest{
 	@DataProvider
 	public Object[][] setData()
 	{
-		HashMap<String, String> map = new HashMap<String,String>();
-		map.put("email", "ram@yopmail.com");
-		map.put("password", "Asdfg1@34");
-		map.put("product", "ADIDAS ORIGINAL");
-		
-		HashMap<String, String> map1 = new HashMap<String,String>();
-		map1.put("email", "nov9@yopmail.com");
-		map1.put("password", "Asdfg1@34");
-		map1.put("product", "ZARA COAT 3");
-		return Object[][] {{map},{map1}};
+		/*
+		 * HashMap<String, String> map = new HashMap<String,String>(); map.put("email",
+		 * "ram@yopmail.com"); map.put("password", "Asdfg1@34"); map.put("product",
+		 * "ADIDAS ORIGINAL");
+		 * 
+		 * HashMap<String, String> map1 = new HashMap<String,String>();
+		 * map1.put("email", "nov9@yopmail.com"); map1.put("password", "Asdfg1@34");
+		 * map1.put("product", "ZARA COAT 3"); return Object[][] {{map},{map1}};
+		 */
+		 return new Object[][]{{"ram@yopmail.com","Asdfg1@34","ADIDAS ORIGINAL"},{"nov9@yopmail.com","Asdfg1@34","ZARA COAT 3"}};
 	}
-	// return new Object[][]{{"ram@yopmail.com","Asdfg1@34","ADIDAS ORIGINAL"},{"nov9@yopmail.com","Asdfg1@34","ZARA COAT 3"}};
+	//
 
 }
